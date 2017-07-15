@@ -8,18 +8,20 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "deparment")
-public class Deparment {
+public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
-    public Deparment(){}
 
-    public long getId() {
+    public Department() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

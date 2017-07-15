@@ -23,7 +23,7 @@ public class User implements Serializable{
     @ManyToOne
     @JoinColumn(name = "did")
     @JsonBackReference
-    private Deparment deparment;
+    private Department department;
     @ManyToMany(cascade = {},fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
         joinColumns = {@JoinColumn(name = "user_id")},
@@ -55,12 +55,12 @@ public class User implements Serializable{
         this.createdate = createdate;
     }
 
-    public Deparment getDeparment() {
-        return deparment;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDeparment(Deparment deparment) {
-        this.deparment = deparment;
+    public void setDepartment(Department deparment) {
+        this.department = deparment;
     }
 
     public List<Role> getRoles() {
